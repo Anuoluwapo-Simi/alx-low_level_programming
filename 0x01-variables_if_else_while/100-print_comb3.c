@@ -1,33 +1,30 @@
 #include <stdio.h>
+
 /**
-* main - entry point
-*
-* codes for printing all possible combination of two d/t digits
-* in ascending order and separated by a comma followed by a space
-*
-* Return: 0 (Success)
+* main - print all possible different combination of two digits
+* R	etur
+[A* Return: Always 0 (Success)
 */
 int main(void)
 {
-int digit1, digit2;
+int n, m;
 
-for (digit1 = 0; digit1 < 9; digit1++)
+for (n = 48; n <= 56; n++)
 {
-for (digit2 = digit1 + 1; digit2 < 10; digit2++)
+for (m = 49; m <= 57; m++)
 {
-putchar((digit1 % 10) + '0');
-putchar((digit2 % 10) + '0');
-
-if (digit1 == 8 && digit2 == 9)
-continue;
-
+if (m > n)
+{
+putchar(n);
+putchar(m);
+if (n != 56 || m != 57)
+{
 putchar(',');
 putchar(' ');
 }
 }
-
-putchar(',');
-[Aputchar('\n');
-
+}
+}
+putchar('\n');
 return (0);
 }
