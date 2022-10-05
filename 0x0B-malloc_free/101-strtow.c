@@ -72,7 +72,7 @@ int i, j = 0, temp = 0, size = 0, words = num_words(str);
 			size++;
 		else if (((str[i] == ' ') || (str[i] == '\0')) && i && (str[i - 1] != ' '))
 		{
-			split[[j] = (char *)malloc(sizeof(char) * size + 1);
+			split[j] = (char *)malloc(sizeof(char) * size + 1);
 			if (split[j] != NULL)
 			{
 				while (temp < size)
@@ -87,7 +87,8 @@ int i, j = 0, temp = 0, size = 0, words = num_words(str);
 			else
 			{
 				while (j-- >= 0)
-					free(split);
+				free(split[j]);
+				free(split);
 				return (NULL);
 			}
 		}
@@ -97,5 +98,5 @@ int i, j = 0, temp = 0, size = 0, words = num_words(str);
 }
 else
 return (NULL)
-	}
+}
 
