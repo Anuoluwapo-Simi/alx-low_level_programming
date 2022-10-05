@@ -97,6 +97,6 @@ int i, j = 0, temp = 0, size = 0, words = num_words(str);
 	return (split);
 }
 else
-return (NULL)
+return (NULL);
 }
 
