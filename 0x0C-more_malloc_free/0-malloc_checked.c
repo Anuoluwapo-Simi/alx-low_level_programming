@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdlib.h>
 
 /**
 *malloc_checked - allocates memory using malloc
@@ -16,3 +17,4 @@ exit(98);
 }
 return (p);
 }
+
