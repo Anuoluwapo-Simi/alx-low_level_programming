@@ -36,7 +36,7 @@ ol++;
 dog->owner = malloc(ol * sizeof(char));
 if (dog->owner == NULL)
 {
-free(dog->name)
+free(dog->name);
 free(dog);
 return (NULL);
 }
